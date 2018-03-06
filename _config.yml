@@ -1,6 +1,6 @@
 # Site settings
-title:          "Smart Home"
-description:    "Smart Home"
+title:          "Smart's Home"
+description:    "База знаний по домашней автоматизации"
 baseurl:        "/"
 url:            "https://smartshome.github.io"
 
