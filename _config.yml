@@ -6,3 +6,5 @@ url:            "https://smartshome.github.io"
 
 # Build settings
 markdown:       kramdown
+
+theme: jekyll-theme-slate
