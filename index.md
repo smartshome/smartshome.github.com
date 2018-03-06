@@ -1,5 +1,5 @@
 ---
-layout: base
+layout: default
 title: "Smart's Home"
 description: "Smart's Home"
 ---
