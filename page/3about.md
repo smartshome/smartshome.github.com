@@ -1,7 +1,9 @@
 ---
-layout: default
-title: "Smart's Home"
-description: "Smart's Home"
+layout: page
+title: "О проекте"
+permalink: /about/
+icon: heart
+type: page
 ---
 
 ## Добро пожаловать в базу знаний telegram-группы ["SmartHome"](https://t.me/SmartsHome)
@@ -46,3 +48,5 @@ description: "Smart's Home"
 * [http://cyber-place.ru/index.php](http://cyber-place.ru/index.php)
 
 Дополнительный канал, практические решения [https://t.me/SmartHomeFAQ](https://t.me/SmartHomeFAQ)
+
+{% include comments.html %}
