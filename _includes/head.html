@@ -9,13 +9,23 @@
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="{{ site.title | default: site.github.repository_name }}">
     <meta name="twitter:description" content="{{ site.description | default: site.github.project_tagline }}">
+    <meta name="twitter:image" content="{% if page.image %}
+        {{ site.url }}{{ '/img/' | prepend: site.baseurl }}{{ page.image }}
+        {% else %}
+         {{ site.url }}{{ '/img/' | prepend: site.baseurl }}{{ site.logo }}
+    {% endif %}" />
 
     <!-- Open Graph -->
     <meta property="og:locale" content="{{ site.lang | default: "en-US" }}">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="{{ site.title | default: site.github.repository_name }}">
+    <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title | default: site.github.repository_name }}{% endif %}">
     <meta property="og:description" content="{{ site.description | default: site.github.project_tagline }}">
     <meta property="og:url" content="https://smartshome.github.io/">
+    <meta property="og:image" content="{% if page.image %}
+        {{ site.url }}{{ '/img/' | prepend: site.baseurl }}{{ page.image }}
+        {% else %}
+         {{ site.url }}{{ '/img/' | prepend: site.baseurl }}{{ site.logo }}
+    {% endif %}" />
 
     <link rel="shortcut icon" href="/favicon.ico?" type="image/x-icon">
     <link rel="icon" href="/favicon.ico?" type="image/x-icon">
