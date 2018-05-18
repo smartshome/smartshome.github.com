@@ -11,6 +11,7 @@
     <meta name="twitter:description" content="{{ site.description | default: site.github.project_tagline }}">
     <meta name="twitter:image" content="{% if page.image %}
         {{ site.url }}{{ '/img/' | prepend: site.baseurl }}{{ page.image }}
+        {% else if page.image_link %}{{ page.image_link }}
         {% else %}
          {{ site.url }}{{ '/img/' | prepend: site.baseurl }}{{ site.logo }}
     {% endif %}" />
@@ -23,6 +24,7 @@
     <meta property="og:url" content="https://smartshome.github.io/">
     <meta property="og:image" content="{% if page.image %}
         {{ site.url }}{{ '/img/' | prepend: site.baseurl }}{{ page.image }}
+        {% else if page.image_link %}{{ page.image_link }}
         {% else %}
          {{ site.url }}{{ '/img/' | prepend: site.baseurl }}{{ site.logo }}
     {% endif %}" />
