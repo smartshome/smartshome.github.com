@@ -1,39 +1,42 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
-
 # Site settings
-title: "Smart's Home"
-brief-intro: "База знаний по домашней автоматизации"
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://smartshome.github.io" # the base hostname & protocol for your site
+title: Willian Justen - Desenvolvedor Front End
+description: A blog about lorem ipsum dolor sit amet
+baseurl: "/cards-jekyll-template" # the subpath of your site, e.g. /blog
+url: "https://willianjusten.com.br" # the base hostname & protocol for your site e.g. http://willianjusten.com.br
 
-permalink: /:year/:month/:day/:title/
-
-# other links
-github_username:  kirovilya
-email: kirovilya@gmail.com
+# User settings
+username: Lorem Ipsum
+user_description: Anon Developer at Lorem Ipsum Dolor
+email: anon@anon.com
+twitter_username: lorem_ipsum
+github_username:  lorem_ipsum
+gplus_username:  lorem_ipsum
+disqus_username: lorem_ipsum
 
 # Build settings
 markdown: kramdown
+highlighter: rouge
+permalink: /:title/
 
-kramdown:
-  input: GFM
-  syntax_highlighter: rouge
 
-# port
-# port: 1234
+# html minify
+compress_html:
+  clippings: all
+  comments: all
+  endings: []
+  profile: false
 
-# url
-category_dir: category/
-tag_dir: tag/
+# Links to include in menu navigation
+# For external links add external: true
+links:
+  - title: Home
+    url: /
+  - title: Series
+    url: /series
+  - title: Tags
+    url: /tags
+  - title: About Me
+    url: /about
 
-# excerpt
-excerpt_separator: "\n\n\n\n"
-
-# paginate
-gems: [jekyll-paginate]
-paginate: 6
+# exclude my node related stuff
+exclude: ['package.json', 'src', 'node_modules']
