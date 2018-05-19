@@ -2,7 +2,7 @@
 layout: post
 title: "MajorDoMo в сети"
 date:   2018-03-07
-main-class: js
+main-class: majordomo
 categories: MajorDoMo
 tags: MajorDoMo MDM МажорДоМо МДМ ссылки
 excerpt:
