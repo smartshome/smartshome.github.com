@@ -18,19 +18,19 @@ introduction: "Делаем автономный умный дом на базе
 
 # Делаем автономный умный дом на базе ioBroker и контроллеров Sonoff
 
-Цели:
+**Цели:**
 
 1. Получить работающий без всяческих облачных технолгий и доступа в Интернет систему умного дома.
 2. Обойтись минимумом денег.
 3. Желательно обойтись минимумом геморроя.
 
-Чем будем управлять:
+**Чем будем управлять:**
 
 1. Светом.
 2. Котлами.
 3. Водонагревателем.
 
-Платформы для клиентского доступа:
+**Платформы для клиентского доступа:**
 
 1. IOS
 2. Android
@@ -44,44 +44,54 @@ introduction: "Делаем автономный умный дом на базе
 ioBroker же устанавливается чуть менее очевидным способом. Для начала, почистим наш Raspbian от ненужного мусора, например, X11:
 
 {% highlight bash %}
-apt-get remove --auto-remove --purge &#39;libx11-.\*&#39;
-apt-get autoremove –purge
+root@pc2i:# apt-get remove --auto-remove --purge &#39;libx11-.\*&#39;
+root@pc2i:# apt-get autoremove –purge
 {% endhighlight %}
 
-Второй пункт повторять пока apt не скажет что делать нечего.
+>Второй пункт повторять пока apt не скажет что делать нечего.
 Затем почистим его от системной сборки NodeJS (потому что нам нужна ванильная):
 
 {% highlight bash %}
-apt-get --purge remove node
-apt-get --purge remove nodejs
-apt-get autoremove –purge
+root@pc2i:# apt-get --purge remove node
+root@pc2i:# apt-get --purge remove nodejs
+root@pc2i:# apt-get autoremove –purge
+root@pc2i:# reboot
 {% endhighlight %}
 
-4. Повторять пп. 3 пока apt не скажет что делать нечего.
-5. reboot
+> Повторять пп. 3 пока apt не скажет что делать нечего.
+
 
 
 Входим в систему под root и ставим NodeJS:
 
-1. curl -sL [https://deb.nodesource.com/setup\_6.x](https://deb.nodesource.com/setup_6.x) | sudo -E bash -
-2. apt-get install -y build-essential python-rpi.gpio python nodejs
-3. reboot
+{% highlight bash %}
+root@pc2i:# curl -sL [https://deb.nodesource.com/setup\_6.x](https://deb.nodesource.com/setup_6.x) | sudo -E bash -
+root@pc2i:# apt-get install -y build-essential python-rpi.gpio python nodejs
+root@pc2i:# reboot
+{% endhighlight %}
 
-Важное замечание: поскольку мы живём в России, то у нас есть буйствующий Роскомнадзор, поэтому, возможно, придётся поправить конфигурацию cURL, чтобы нам не сыпало 451 ошибкой при попытке что-то скачать. Создаём ~/.curlrc и прописываем в него proxy = http://username:password@proxy-host:port, меняя параметры на ваши.
+>Важное замечание: поскольку мы живём в России, то у нас есть буйствующий Роскомнадзор, поэтому, возможно, придётся поправить >конфигурацию cURL, чтобы нам не сыпало 451 ошибкой при попытке что-то скачать. 
+
+Создаём ~/.curlrc и прописываем в него proxy = http://username:password@proxy-host:port, меняя параметры на ваши.
 
 Переходим к установке ioBroker:
 
-1. mkdir /opt/iobroker
-2. chmod 777 /opt/iobroker
-3. cd /opt/iobroker
-4. npm install iobroker --unsafe-perm
+{% highlight bash %}
+root@pc2i:# mkdir /opt/iobroker
+root@pc2i:# chmod 777 /opt/iobroker
+root@pc2i:# cd /opt/iobroker
+root@pc2i:/opt/iobroker# npm install iobroker --unsafe-perm
+{% endhighlight %}
 
 Теперь ioBroker будет доступен на 8081TCP порту. Не забудьте настроить статический IP-адрес на сервере! Либо static DHCP lease, либо в /etc/dhcpcd.conf. Запомните его, он дальше потребуется для настройки.
 
 Также стоит не забыть открыть тройку портов:
+
+{% highlight bash %}
 iptables -A INPUT -m state --state NEW -m tcp -p tcp --dport 8081 -j ACCEPT
 iptables -A INPUT -m state --state NEW -m tcp -p tcp --dport 8082 -j ACCEPT
 iptables -A INPUT -m state --state NEW -m tcp -p tcp --dport 1883 -j ACCEPT
+{% endhighlight %}
 
 И заодно добавляем эти три строки в /etc/rc.local, чтобы после перезагрузки порты не остались закрытыми.
 
@@ -89,18 +99,18 @@ iptables -A INPUT -m state --state NEW -m tcp -p tcp --dport 1883 -j ACCEPT
 
 Были закуплены Sonoff Basic и Sonoff TH16. Оба этих &quot;Wi-Fi smart switch&quot; выполнены на контроллере ESP8266EX и имеют на борту 8 мегабит флеш-памяти (1 мегабайт). GPIO, которые могут нам потребоваться, распределены следующим образом:
 
-- GPIO0 - кнопка
+**- GPIO0 - кнопка
 - GPIO12 - реле
 - GPIO13 - светодиод
-- GPIO14 - на Sonoff Basic не занят, на Sonoff TH16 это 2.5 мм jack для подключения внешнего датчика, AM2301, например.
+- GPIO14 - на Sonoff Basic не занят, на Sonoff TH16 это 2.5 мм jack для подключения внешнего датчика, AM2301, например.**
 
 Прошивка, путём страдания и проб, была выбрана ESPEasy mega-20180505 ( [https://github.com/letscontrolit/ESPEasy/releases/tag/mega-20180505](https://github.com/letscontrolit/ESPEasy/releases/tag/mega-20180505)), как наиболее стабильная и предсказуемая. Прошивать мы её будем через UART (на самом деле USART, но кого это волнует?). В качестве прошивальщика я использовал esptool.py, так как на моём хосте с Arch Linux он прекрасно и без помех установился с помощью yaourt из AUR.
 
 Расположение пинов для прошивки дислоцируется на глаз, но опишу для не очень прозорливых:
 
-Sonoff TH16 - в дальнем от питания углу платы прямо подписаны VCC, Tx, Rx и GND.
+**Sonoff TH16** - в дальнем от питания углу платы прямо подписаны VCC, Tx, Rx и GND.
 
-Sonoff Basic - пять пятаков с отверстиями между конденсатором, кнопкой и флеш-памятью. Печатью на текстолите они обведены в прямоугольник, ближайший к кнопке обведён в квадрат. Начиная с квадрата: VCC, Tx, Rx, GND, GPIO14.
+**Sonoff Basic** - пять пятаков с отверстиями между конденсатором, кнопкой и флеш-памятью. Печатью на текстолите они обведены в прямоугольник, ближайший к кнопке обведён в квадрат. Начиная с квадрата: VCC, Tx, Rx, GND, GPIO14.
 
 VCC что для того, что для другого - 3.3 вольта. Важно: питание из розетки вытаскиваем, прежде чем подключить VCC от USB-to-UART, потому что гальванической развязки на плате нет и вы сожгёте к херям свой Sonoff, USB-to-UART, а если не повезёт, то и порты на материнке компьютера.
 
