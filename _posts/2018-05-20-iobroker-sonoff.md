@@ -42,21 +42,25 @@ introduction: "Делаем автономный умный дом на базе
 Так как исторически сложилось, что почти все инсталляции ioBroker производятся на Debian, то не будем отходить от этого и установим Raspbian. Можно даже не заморачиваться на выпуск, хоть все инструкции написаны для выпуска Jessie, мы можем с тем же успехом использовать и Stretch. Установку дистрибутива я описывать не буду, в интернете и так полно описаний, как это сделать.
 
 ioBroker же устанавливается чуть менее очевидным способом. Для начала, почистим наш Raspbian от ненужного мусора, например, X11:
+
 {% highlight bash %}
 apt-get remove --auto-remove --purge &#39;libx11-.\*&#39;
 apt-get autoremove –purge
 {% endhighlight %}
-Второй пункт повторять пока apt не скажет что делать нечего.
 
+Второй пункт повторять пока apt не скажет что делать нечего.
 Затем почистим его от системной сборки NodeJS (потому что нам нужна ванильная):
+
 {% highlight bash %}
 apt-get --purge remove node
 apt-get --purge remove nodejs
 apt-get autoremove –purge
 {% endhighlight %}
+
 4. Повторять пп. 3 пока apt не скажет что делать нечего.
 5. reboot
-{% endhighlight %}
+
+
 Входим в систему под root и ставим NodeJS:
 
 1. curl -sL [https://deb.nodesource.com/setup\_6.x](https://deb.nodesource.com/setup_6.x) | sudo -E bash -
