@@ -12,6 +12,7 @@ layout: default
             <div class="box-body">
                 <meta itemprop="datePublished" content="{{post.date | date_to_xmlschema }}">
                 <time itemprop="datePublished" datetime="{{ post.date }}" class="date">{{ post.date | date_to_string }}</time>
+                <span><a href="{{ post.url | prepend: site.baseurl }}#disqus_thread">Comments</a></span>
                 <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
                     <h2 class="post-title" itemprop="name">
                         {{ post.title }}
@@ -25,7 +26,6 @@ layout: default
                         <a href="{{site.baseurl}}/tags/#{{tag | slugify }}">{{ tag }}</a>
                     {% endfor %}
                 </div>
-                <a href="URL#disqus_thread">Comments</a>
             </div>
         </article>
     {% endfor %}
