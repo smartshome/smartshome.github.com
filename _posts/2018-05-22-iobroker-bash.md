@@ -13,7 +13,7 @@ tags:
 - иоб
 - Linux 
 excerpt:
-introduction: "Консольные команды для установки ioBroker"
+introduction: "❗️ Консольные команды для установки ioBroker"
 ---
 
 # Установка ioBroker на Linux
