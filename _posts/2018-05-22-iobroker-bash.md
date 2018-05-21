@@ -2,7 +2,7 @@
 layout: post
 title: "Install ioBroker "
 date:   2018-05-22
-description: "ioBroker и Sonoff"
+description: "Консольные команды для установки ioBroker"
 categories: ioBroker
 main-class: 'iobroker'
 color: '#EB7728'
