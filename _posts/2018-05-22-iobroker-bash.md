@@ -18,11 +18,10 @@ introduction: "❗️ Консольные команды для установ�
 
 # Установка ioBroker на Linux
 **Подготовим систему, установим необходимые пакеты**
->Все команды от **root**
-
->Строки 2-4 удалят версии Nodejs, если они были ранее установленны.
-
->В 5 строке перезагрузка
+>Все команды от **root**     
+>Строки 2-4 выполнить если ранее были установленны другие версии **Nodejs** .     
+>В 5 строке перезагрузка    
+>6 строка выполнить если не установлен **curl**
 
 {% highlight bash %}
 root@pc2i:#apt-get update && apt-get upgrade
@@ -30,6 +29,7 @@ root@pc2i:#apt-get --purge remove node
 root@pc2i:#apt-get --purge remove nodejs
 root@pc2i:#apt-get autoremove
 root@pc2i:#reboot
+root@pc2i:#apt-get install curl
 root@pc2i:#curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
 root@pc2i:#apt-get install -y nodejs
 root@pc2i:#apt-get install git-core libnss-mdns libavahi-compat-libdnssd-dev -y
