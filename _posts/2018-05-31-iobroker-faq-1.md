@@ -8,7 +8,7 @@ main-class: 'iobroker'
 color: '#EB7728'
 tags: iobroker iob иоброкер иоб
 excerpt:
-introduction: "ioBroker- ⁉️ Как установить из latest repo,переключить в debag, установить с git . "
+introduction: "⁉️ -  Как в ioBroker установить из latest repo,переключить в debag, установить с git . "
 ---
 
 ## Как установить версию latest [?][1]
