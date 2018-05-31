@@ -8,20 +8,20 @@ main-class: 'iobroker'
 color: '#EB7728'
 tags: iobroker iob иоброкер иоб
 excerpt:
-introduction: "ioBroker-установить из latest repo,переключить в debag, установить с git . "
+introduction: "ioBroker- ⁉️ Как установить из latest repo,переключить в debag, установить с git . "
 ---
 
-# Как установить версию latest [?][1]
+## Как установить версию latest [?][1]
 ### Для 2 версии адаптера admin.2.x.x
 ![][2]
 ### Для 3 версии адаптера admin.3.x.x
 ![][3]
-# Как переключить драйвер в debug ?
+## Как переключить драйвер в debug ?
 ### Для 2 версии адаптера admin.2.x.x
 ![][4]
 ### Для 3 версии адаптера admin.3.x.x
 ![][5]
-# Как установить c github ?
+## Как установить c github ?
 ### Для 2 версии адаптера admin.2.x.x
 ![][6]
 ### Для 3 версии адаптера admin.3.x.x
