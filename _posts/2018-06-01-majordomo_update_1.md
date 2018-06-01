@@ -9,7 +9,7 @@ excerpt:
 introduction: " 🏠 Обновление модуля MajorDoMo Xiaomi miIO. Версия 1.7-beta."
 ---
 
-# MajorDoMo:Обновление модуля MajorDoMo Xiaomi miIO. Версия 1.7-beta.
+# [MajorDoMo][1]:Обновление модуля MajorDoMo Xiaomi miIO. Версия 1.7-beta.
 
 
 * Добавлена поддержка пылесоса Mi Roborock S50/S51:
@@ -39,16 +39,21 @@ introduction: " 🏠 Обновление модуля MajorDoMo Xiaomi miIO. В
 * Исправлено расположение кнопки About.
 * Меню выбора типа устройств теперь с картинками.
 
+![][2]
+![][3]
+![][4]
+![][5]
 ![][6]
+
 
 Благодарность за финансовую помощь пользователю с форума TrDA
 
-[1]: http://iobroker.net/
-[2]: /assets/image/latest.jpg
-[3]: /assets/image/latest_3.jpg
-[4]: /assets/image/debug.jpg
-[5]: /assets/image/debug_3.jpg
-[6]: /assets/image/git.jpg
-[7]: /assets/image/git_3.jpg
+[1]: http://majordomo.smartliving.ru/
+[2]: /assets/image/mdm_milo_1.jpg
+[3]: /assets/image/mdm_milo_2.jpg
+[4]: /assets/image/mdm_milo_3.jpg
+[5]: /assets/image/mdm_milo_4.jpg
+[6]: /assets/image/mdm_milo_5.jpg
+
 
 
