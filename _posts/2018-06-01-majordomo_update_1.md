@@ -5,7 +5,7 @@ date:   2018-06-01
 main-class: majordomo
 categories: MajorDoMo
 tags: MajorDoMo MDM МажорДоМо МДМ ссылки
-description: "Модуль MajorDoMo Xiaomi miIO"
+description: "Добавлена поддержка пылесоса Mi Roborock,поддержка спотов Philips Zhirui Downlight,розетки Mi Smart Socket Plug."
 excerpt:
 introduction: " 🏠 Обновление модуля MajorDoMo Xiaomi miIO. Версия 1.7-beta."
 ---
