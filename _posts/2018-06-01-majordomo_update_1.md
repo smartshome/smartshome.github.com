@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "MajorDoMo в сети"
+title: "Модуль MajorDoMo Xiaomi miIO"
 date:   2018-06-01
 main-class: majordomo
 categories: MajorDoMo
