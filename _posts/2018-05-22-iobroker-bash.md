@@ -30,12 +30,12 @@ root@pc2i:#apt-get --purge remove nodejs
 root@pc2i:#apt-get autoremove
 root@pc2i:#reboot
 root@pc2i:#apt-get install curl
-root@pc2i:#curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+root@pc2i:#curl -sL https://deb.nodesource.com/setup_8.x | bash -
 root@pc2i:#apt-get install -y nodejs
 root@pc2i:#apt-get install git-core libnss-mdns libavahi-compat-libdnssd-dev -y
 root@pc2i:#apt-get install build-essential libpcap-dev
 root@pc2i:#npm install -g node-gyp
-root@pc2i:#npm install -g npm@4
+root@pc2i:#npm install -g npm@latest
 {% endhighlight %}
 
 **Установка ioBroker**
