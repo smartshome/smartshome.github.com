@@ -6,9 +6,9 @@ description: "Управляем Андроид устройством поср�
 categories: mobile
 main-class: 'mobile'
 color: '#EB7728'
-tags: MQTT mobile 
+tags: MQTT mobile Android
 excerpt:
-introduction: "🎮 -  MQTT Broadcast Receiver . "
+introduction: "🎮 - Андроид приложение  MQTT Broadcast Receiver . "
 ---
 
 ## Приложение для android, которое может передавать данные о состоянии батареи, входящих звонках и сообщениях и т.д. [.][1]
