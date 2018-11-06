@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Установка ioBroker на ОС Linux "
-date:   2018-05-22
+date:   2018-11-06
 description: "Установка ioBroker на ОС Linux"
 categories: ioBroker
 main-class: 'iobroker'
