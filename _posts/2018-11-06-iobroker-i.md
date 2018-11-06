@@ -144,6 +144,7 @@ http://ип_вашей_системы:8081
 Небольшой обзор админки мы проведём в слеующей статье.
 
 Удачи!
+
 [1]: https://linuxmint.com/
 [2]: https://dietpi.com/
 [3]: /assets/image/intro_iob.png
