@@ -219,8 +219,6 @@ http://ип_вашей_системы:8081
 
 ![][21]
 
-
-
 [1]: https://linuxmint.com/
 [2]: https://dietpi.com/
 [3]: /assets/image/intro_iob.png
