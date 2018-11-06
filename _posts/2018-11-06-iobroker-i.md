@@ -179,3 +179,9 @@ http://ип_вашей_системы:8081
 [5]: /assets/image/serialport.png
 [6]: /assets/image/admin_st.png
 [7]: /assets/image/alex/4.png
+[8]: /assets/image/alex/5.png
+[9]: /assets/image/alex/6.png
+[10]: /assets/image/alex/7.png
+[11]: /assets/image/alex/8.png
+[12]: /assets/image/alex/9.png
+[13]: /assets/image/alex/10.png
