@@ -146,9 +146,8 @@ http://ип_вашей_системы:8081
 Удачи!
 [1]: https://linuxmint.com/
 [2]: https://dietpi.com/
-[3]: https://sprut.ai/static/media/cache/00/06/47/40/271/4742/3000x_image.png
-[4]: https://sprut.ai/static/media/cache/00/06/47/40/271/4606/1600x_image.png
-[5]: https://sprut.ai/static/media/cache/00/06/47/40/271/4605/1600x_image.png
-[6]: https://sprut.ai/static/media/cache/00/06/47/40/271/4610/1600x_image.png
-
+[3]: /assets/image/intro_iob.png
+[4]: /assets/image/node_v.png
+[5]: /assets/image/serialport.png
+[6]: /assets/image/admin_st.png
 
