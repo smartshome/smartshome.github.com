@@ -95,10 +95,24 @@ introduction: "🎤 Голосовое управление через IFTTT"
 ![][24]
 
 
+7. Осталось отреагировать на событие. Создадим скрипт который будет следить за изменением в обьекте  cloud.0.services.ifttt
+ 
+![][25]
 
+{% highlight javascript %}
+on({id: 'cloud.0.services.ifttt', change: "ne"}, function (obj) { //Подписуемся на изменение обьекта cloud.0.services.ifttt
+  var value = obj.state.val;
+  var oldValue = obj.oldState.val;
+  if (getState("cloud.0.services.ifttt").val === 'monkey_white') { //и если оно равно monkey_white
+    setState("sayit.0.tts.text", 'Получилось');//то наш скрипт говорит в колонку "Получилось"
+  }
+});
+{% endhighlight %}
 
+на блокли это выглядит так 
 
-to be continued...
+![][26]
+
 
 [1]: https://sprut.ai/client/article/274
 [2]: http://www.iobroker.net/docu/?page_id=2630&lang=ru
@@ -124,8 +138,8 @@ to be continued...
 [22]: /assets/image/salam/ifttt_that_wh.png
 [23]: /assets/image/salam/ifttt_wh_rq.png
 [24]: /assets/image/salam/ifttt_wh_cpl.png
-
-
+[25]: /assets/image/salam/ifttt_obj.png
+[26]: /assets/image/salam/ifttt_script.png
 
 
 
