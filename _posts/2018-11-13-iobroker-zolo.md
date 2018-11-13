@@ -44,7 +44,7 @@ introduction: "🎤 Голосовое управление через IFTTT"
  ![][7]
 
 
-
+to be continued...
 
 [1]: https://sprut.ai/client/article/274
 [2]: http://www.iobroker.net/docu/?page_id=2630&lang=ru
