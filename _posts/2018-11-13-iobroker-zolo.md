@@ -70,9 +70,24 @@ introduction: "🎤 Голосовое управление через IFTTT"
  ![][11]
 
 **IFTTT key** находится по ссылке https://ifttt.com/maker_webhooks , тапнув на **Документация** .
+Есть инструкция на [GitHub][15]
 
  ![][12]
 
+6. Переходим к настройке сценария на  IFTTT. Естественно Вы уже зарегестрированы на IFTTT, по картинкам настраиваем сценарий.
+
+![][16]
+![][17]
+![][18]
+![][19]
+![][20]
+![][21]
+![][22]
+![][23]
+![][24]
+![][12]
+![][12]
+![][12]
 
 to be continued...
 
@@ -90,3 +105,23 @@ to be continued...
 [12]: /assets/image/salam/ifttt_wh.png
 [13]: /assets/image/salam/chrom_i.png
 [14]: /assets/image/salam/sayit_obj.png
+[15]: https://github.com/ioBroker/ioBroker.cloud/blob/master/doc/ifttt.md
+[16]: /assets/image/salam/ifttt_ap.png
+[17]: /assets/image/salam/ifttt_this.png
+[18]: /assets/image/salam/ifttt_as.png
+[19]: /assets/image/salam/ifttt_tr.png
+[20]: /assets/image/salam/ifttt_that.png
+[21]: /assets/image/salam/ifttt_that_wh.png
+[22]: /assets/image/salam/ifttt_wh_rq.png
+[23]: /assets/image/salam/ifttt_wh.png
+[24]: /assets/image/salam/ifttt_wh_cpl.png
+
+
+
+
+
+
+
+
+
+
