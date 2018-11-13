@@ -69,7 +69,7 @@ introduction: "🎤 Голосовое управление через IFTTT"
 
  ![][11]
 
-**IFTTT key** находится по ссылке https://ifttt.com/maker_webhooks , тапнув на **Документация** .
+**IFTTT key** находится по ссылке [www.ifttt.com/maker_webhooks][15] , тапнув на **Документация** .
 Есть инструкция на [GitHub][15]
 
  ![][12]
@@ -140,6 +140,7 @@ on({id: 'cloud.0.services.ifttt', change: "ne"}, function (obj) { //Подпис
 [24]: /assets/image/salam/ifttt_wh_cpl.png
 [25]: /assets/image/salam/ifttt_obj.png
 [26]: /assets/image/salam/ifttt_script.png
+[27]: https://ifttt.com/maker_webhooks 
 
 
 
