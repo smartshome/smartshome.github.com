@@ -94,6 +94,8 @@ introduction: "🎤 Голосовое управление через IFTTT"
 
 ![][24]
 
+![][25]
+
 
 
 to be continued...
@@ -117,11 +119,12 @@ to be continued...
 [17]: /assets/image/salam/ifttt_this.png
 [18]: /assets/image/salam/ifttt_as.png
 [19]: /assets/image/salam/ifttt_tr.png
-[20]: /assets/image/salam/ifttt_that.png
-[21]: /assets/image/salam/ifttt_that_wh.png
-[22]: /assets/image/salam/ifttt_wh_rq.png
-[23]: /assets/image/salam/ifttt_wh.png
-[24]: /assets/image/salam/ifttt_wh_cpl.png
+[20]: /assets/image/salam/ifttt_cpl.png
+[21]: /assets/image/salam/ifttt_that.png
+[22]: /assets/image/salam/ifttt_that_wh.png
+[23]: /assets/image/salam/ifttt_wh_rq.png
+[24]: /assets/image/salam/ifttt_wh.png
+[25]: /assets/image/salam/ifttt_wh_cpl.png
 
 
 
