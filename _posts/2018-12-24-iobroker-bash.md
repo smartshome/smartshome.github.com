@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Расчёт расстояния до мобильного телефона "
-date:   2018-05-22
+date:   2018-12-24
 description: "ioBroker Find my Mobile"
 categories: ioBroker
 main-class: 'iobroker'
