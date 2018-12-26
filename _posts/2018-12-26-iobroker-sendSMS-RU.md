@@ -65,8 +65,10 @@ function sendSMS() {
 
 Использовать просто - заполняем поля **message** и **numbers** (номеров можно несколько, через запятую) и вызываем функцию **sendSMS();**
 
+![][3]
+
 [1]: http://smart2promo.sms.ru/
 [2]: /assets/image/pooh063/smsru.png
-[3]: /assets/image/pooh063/
+[3]: /assets/image/pooh063/2.png
 [4]: /assets/image/pooh063/
 [5]: /assets/image/pooh063/
