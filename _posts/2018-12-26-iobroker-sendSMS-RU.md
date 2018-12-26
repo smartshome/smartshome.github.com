@@ -6,7 +6,13 @@ description: "ioBroker — отправляем SMS скриптом. "
 categories: iobroker
 main-class: 'iobroker'
 color: '#EB7728'
-tags: iobroker iob иоброкер иоб
+tags:
+- iobroker
+- iob
+- иоброкер
+- иоб
+- script
+- jscript 
 excerpt:
 introduction: "📝-  инструкция отправки SMS скриптом. "
 ---
