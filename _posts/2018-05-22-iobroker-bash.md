@@ -46,5 +46,5 @@ root@pc2i:#npm install -g npm@latest
 cd /opt
 mkdir iobroker
 cd iobroker
-curl -sL https://raw.githubusercontent.com/ioBroker/ioBroker/stable-installer/fix_installation.sh | bash -
+curl -sL https://raw.githubusercontent.com/ioBroker/ioBroker/stable-installer/installer.sh | bash -
 {% endhighlight %}
