@@ -46,6 +46,5 @@ root@pc2i:#npm install -g npm@latest
 cd /opt
 mkdir iobroker
 cd iobroker
-npm install iobroker --unsafe-perm
-init 6
+curl -sL https://raw.githubusercontent.com/ioBroker/ioBroker/stable-installer/fix_installation.sh | bash -
 {% endhighlight %}
