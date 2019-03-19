@@ -33,16 +33,16 @@ nodejs -v
 
 
 {% highlight bash %}
-root@pc2i:#apt-get update && apt-get upgrade
-root@pc2i:#apt-get --purge remove node
-root@pc2i:#apt-get --purge remove nodejs
-root@pc2i:#apt-get autoremove
-root@pc2i:#reboot
-root@pc2i:#apt-get install curl
-root@pc2i:#curl -sL https://deb.nodesource.com/setup_8.x | bash -
-root@pc2i:#apt-get install -y nodejs
-root@pc2i:#npm install -g node-gyp
-root@pc2i:#npm install -g npm@latest
+1 root@pc2i:#apt-get update && apt-get upgrade
+2 root@pc2i:#apt-get --purge remove node
+3 root@pc2i:#apt-get --purge remove nodejs
+4 root@pc2i:#apt-get autoremove
+5 root@pc2i:#reboot
+6 root@pc2i:#apt-get install curl
+7 root@pc2i:#curl -sL https://deb.nodesource.com/setup_8.x | bash -
+8 root@pc2i:#apt-get install -y nodejs
+9 root@pc2i:#npm install -g node-gyp
+10 root@pc2i:#npm install -g npm@latest
 
 {% endhighlight %}
 
