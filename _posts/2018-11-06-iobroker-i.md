@@ -105,7 +105,7 @@ sudo su
 cd /opt
 mkdir iobroker
 cd iobroker
-npm install iobroker --unsafe-perm
+curl -sL https://iobroker.net/install.sh | bash -
 {% endhighlight %}
 
 
