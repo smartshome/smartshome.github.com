@@ -39,7 +39,7 @@ introduction: "⚙️ Интегрируем API Saures.ru в  ioBroker"
 
 Ну и сам скрипт, который получает значения через API и сохраняет в обьектах IoBrоker.
 
-{% highlight jscript %}
+{% highlight javascript %}
 let request = require('request');//подключаем библиотеку request запросов
 
 createState('Saures.hot_water',0);//Создаем обьекты куда запишем значения из базы Saures
@@ -97,12 +97,12 @@ request.post(optionsPost, getSid); //отправляем запрос
 
 в функции **getMeter** для получения данных расскоментируем строку
 
-{% highlight jscript %}
+{% highlight javascript %}
 //console.log(body); //раскоментировать для получения JSON данных
 {% endhighlight %}
 
 Полученный код необходимо вставить в левую панель , а в правой смотрим путь для нужного значения данных.
-{% highlight jscript %}
+{% highlight javascript %}
  let HotW = info.data.sensors[0].meters[0].value
 {% endhighlight %}
  
