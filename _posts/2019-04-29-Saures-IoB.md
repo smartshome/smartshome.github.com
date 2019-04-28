@@ -109,7 +109,7 @@ request.post(optionsPost, getSid); //отправляем запрос
  ![][6]
 
 Заменить **flat_id: '385'** на свой, который можно получить Get запросом на 
-** https://lk.saures.ru/api/company/flats **
+ https://lk.saures.ru/api/company/flats 
 
 {% highlight javascript %}
 qs: { sid: sid, flat_id: '385' },   //опции для Get запроса 
