@@ -31,7 +31,7 @@ introduction: "⚙️ Интегрируем API Saures.ru в  ioBroker"
 
 ![][3]
 
->Программа может сгенерировать код для запроса для разных ЯП ...**NodeJS** **PHP** **bash** и т.д.
+>Программа может сгенерировать код  запроса для разных ЯП ...**NodeJS** **PHP** **bash** и т.д.
 
 
 
@@ -119,4 +119,4 @@ request.post(optionsPost, getSid); //отправляем запрос
 [3]: /assets/image/Postman_code.png
 [5]: https://jsoneditoronline.org/
 [6]: /assets/image/JSON_Editor.jpg
-[6]: /assets/image/ObjSaures.png
+[7]: /assets/image/ObjSaures.png
