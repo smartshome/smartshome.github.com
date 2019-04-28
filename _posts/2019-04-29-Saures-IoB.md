@@ -52,7 +52,7 @@ sid;
 let optionsPost = { //опции для Post запроса 
  url:apiUrlLogin,
  headers: {"Content-Type": " application/x-www-form-urlencoded; charset=utf-8"},
- formData: { email: 'demo@saures.ru', password: 'demo' }
+ formData: { email: 'demo@saures.ru', password: 'demo' }// логин с паролем
 };
 
  
@@ -107,6 +107,20 @@ request.post(optionsPost, getSid); //отправляем запрос
 {% endhighlight %}
  
  ![][6]
+
+Заменить **flat_id: '385'** на свой, который можно получить Get запросом на 
+** https://lk.saures.ru/api/company/flats **
+
+{% highlight javascript %}
+qs: { sid: sid, flat_id: '385' },   //опции для Get запроса 
+{% endhighlight %}
+
+Ну конечно же свой логин и пароль.
+
+{% highlight javascript %}
+formData: { email: 'demo@saures.ru', password: 'demo' }// логин с паролем
+{% endhighlight %}
+
 
 ### Итог.
 
