@@ -25,7 +25,7 @@ introduction: "⚙️ Интегрируем API Saures.ru в  ioBroker"
 
 ### Отправляем POST и GET запросы.
 
->Для отправки POST и GET запросов будем пользовать програму  [Postman][2].
+>Для отправки POST и GET запросов будем использовать программу  [Postman][2].
 
 В теле запроса пропишем емайл и пасворд, в  теле ответа должны увидеть ** sid **.
 
@@ -73,10 +73,10 @@ function getMeter(error, response, body) {
       var info = JSON.parse(body);
      //console.log(body); //раскоментировать для получения JSON данных
       console.log(" Статус - "+info.status );
-      let HotW = info.data.sensors[0].meters[0].value ;//записуем значения в переменые
+      let HotW = info.data.sensors[0].meters[0].value ;//записываем значения в переменные
       let ColdW = info.data.sensors[0].meters[1].value ;
       let tempW = info.data.sensors[0].meters[2].value ;
-      setState("javascript.0.Saures.hot_water", HotW, true);//записуем значения в созданые обьекты
+      setState("javascript.0.Saures.hot_water", HotW, true);//записываем значения в созданные объекты
       setState("javascript.0.Saures.cold_water", ColdW, true);
       setState("javascript.0.Saures.temp_water", tempW, true);
     }
@@ -84,7 +84,7 @@ function getMeter(error, response, body) {
 
 // schedule("* */12 * * *",  () => {
 //   request.post(optionsPost, getSid);
-// }); // раскоментировать крон для отправки запросов каждые 12 часов
+// }); // раскомментировать крон для отправки запросов каждые 12 часов
 
 request.post(optionsPost, getSid); //отправляем запрос
 
@@ -92,13 +92,13 @@ request.post(optionsPost, getSid); //отправляем запрос
 
 ### Редактируем скрипт под свои задачи.
 
-Для удобства распарсивания даных которые приходят с сервера воспользуемся 
+Для удобства распарсивания данных, которые приходят с сервера, воспользуемся 
 [JSONeditorOnline][2]
 
-в функции **getMeter** для получения данных расскоментируем строку
+в функции **getMeter** для получения данных раскомментируем строку
 
 {% highlight javascript %}
-//console.log(body); //раскоментировать для получения JSON данных
+//console.log(body); //раскомментировать для получения JSON данных
 {% endhighlight %}
 
 Полученный код необходимо вставить в левую панель , а в правой смотрим путь для нужного значения данных.
@@ -124,7 +124,7 @@ formData: { email: 'demo@saures.ru', password: 'demo' }// логин с паро
 
 ### Итог.
 
-В итоге получаем значения в обьектах **IoBroker**, которые будут обновлятся раз в 12 часов.
+В итоге получаем значения в обьектах **IoBroker**, которые будут обновляться один раз в 12 часов.
 
 ![][7]
 
