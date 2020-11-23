@@ -46,8 +46,8 @@ createState('Saures.hot_water',0);//Создаем обьекты куда за�
 createState('Saures.cold_water',0);// с значениями = 0
 createState('Saures.temp_water',0);
 
-let apiUrlLogin= 'https://lk.saures.ru/api/auth/login';
-let apiUrlMeter= 'https://lk.saures.ru/api/meter/meters',
+let apiUrlLogin= 'https://api.saures.ru/1.0/login';
+let apiUrlMeter= 'https://api.saures.ru/1.0/object/meters',
 sid;
 let optionsPost = { //опции для Post запроса 
  url:apiUrlLogin,
@@ -63,7 +63,7 @@ function getSid(error, response, body) {
     console.log(" Sid is - "+sid );
     let optionsGet = {
     url: apiUrlMeter,
-    qs: { sid: sid, flat_id: '385' },   //опции для Get запроса 
+    qs: { sid: sid, id: '358' },   //опции для Get запроса 
 }
     setTimeout(() => {request.get(optionsGet, getMeter)}, 1000);//Get запрос данных
   }
@@ -71,11 +71,11 @@ function getSid(error, response, body) {
 function getMeter(error, response, body) {
     if (!error && response.statusCode == 200  ) {
       var info = JSON.parse(body);
-     //console.log(body); //раскоментировать для получения JSON данных
+     console.log(info.data.sensors[2].meters[6].vals[0]); //раскоментировать для получения JSON данных
       console.log(" Статус - "+info.status );
-      let HotW = info.data.sensors[0].meters[0].value ;//записываем значения в переменные
-      let ColdW = info.data.sensors[0].meters[1].value ;
-      let tempW = info.data.sensors[0].meters[2].value ;
+      let HotW = info.data.sensors[2].meters[0].vals[0] ;//записываем значения в переменные
+      let ColdW = info.data.sensors[2].meters[1].vals[0] ;
+      let tempW = info.data.sensors[2].meters[2].vals[0] ;
       setState("javascript.0.Saures.hot_water", HotW, true);//записываем значения в созданные объекты
       setState("javascript.0.Saures.cold_water", ColdW, true);
       setState("javascript.0.Saures.temp_water", tempW, true);
@@ -86,14 +86,14 @@ function getMeter(error, response, body) {
 //   request.post(optionsPost, getSid);
 // }); // раскомментировать крон для отправки запросов каждые 12 часов
 
-request.post(optionsPost, getSid); //отправляем запрос
+request.post(optionsPost, getSid); 
 
 {% endhighlight %}
 
 ### Редактируем скрипт под свои задачи.
 
 Для удобства распарсивания данных, которые приходят с сервера, воспользуемся 
-[JSONeditorOnline][2]
+[JSONeditorOnline][5]
 
 в функции **getMeter** для получения данных раскомментируем строку
 
@@ -110,6 +110,9 @@ request.post(optionsPost, getSid); //отправляем запрос
 
 Заменить **flat_id: '385'** на свой, который можно получить Get запросом на 
  https://lk.saures.ru/api/company/flats 
+
+Поменялось **API** 
+https://api.saures.ru/doc/
 
 {% highlight javascript %}
 qs: { sid: sid, flat_id: '385' },   //опции для Get запроса 
